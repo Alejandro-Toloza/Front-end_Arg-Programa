@@ -1,0 +1,25 @@
+.row{
+    padding: 20px;
+    background-color:  rgb(11, 14, 55);
+    color: aliceblue;
+}
+.contenedor{
+    width: auto;
+}
+.parte1, .parte2{
+    display:inline-block;
+    text-align: justify;
+}
+.img-proyecto{
+    box-shadow: 10px 10px 30px #000;
+    opacity: .7;
+    border-radius: 10px;
+}
+
+.img-proyecto:hover{
+    opacity: 1;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+    
+}

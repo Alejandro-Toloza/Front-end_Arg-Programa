@@ -1,0 +1,12 @@
+.row{
+    background: chocolate;
+    background-color:  rgb(17, 20, 59);
+}
+footer{
+    color: aliceblue;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
