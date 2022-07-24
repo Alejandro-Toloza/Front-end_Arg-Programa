@@ -1,21 +1,32 @@
-
-
 <div class="row">
-    <h1>Experiencia Laboral</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h1>Trainee en MassViajeros</h1>
-            <h2>BackEnd Developer</h2>
-            <h6>07/04/2021 - 15/08/2021</h6>
-            <p>Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Labore, ullam nihil! Delectus 
-                error obcaecati modi cumque itaque debitis odio 
-                adipisci nisi hic velit dolor non, 
-                at et. Necessitatibus, perspiciatis nostrum.
-            </p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/img/massviajeros-logo.png"  class="img-fluid img-proyecto">
-        </div>
+    <h1>Experiencia laboral</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp">
+            Nueva Experiencia
+        </button>
     </div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td>
+                        <h2>{{Experiencia.nombreE}}</h2>
+                    </td>
+                    <td>{{Experiencia.descripcionE}}</td>
+                    <td>
+                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+</div>

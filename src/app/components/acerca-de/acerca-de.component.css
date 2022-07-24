@@ -16,18 +16,19 @@ div{
 #nombre{
     font-weight: bold;
     margin-top: 50%;
-
 }
+
+
 
 /*-medias--*/
 @media (min-width:576.0px) {
     #foto-perfil{
         position: absolute;
-        width: 15%;
+        width: 25%;
         border-radius:100%;
         border: 5px solid rgba(199, 219, 227, 0.434);
         left: 3%;
-        top: 600px;
+        top: 280px;
     }
 }
 @media (max-width:575.0px) {
@@ -37,6 +38,6 @@ div{
         border-radius:100%;
         border: 5px solid rgba(199, 219, 227, 0.434);
         left: 30%;
-        top: 600px;
+        top: 280px;
     }
 }
