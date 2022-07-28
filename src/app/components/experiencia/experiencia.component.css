@@ -12,6 +12,13 @@ div{
     display:inline-block;
     text-align: justify;
 }
+.n-exp{
+    color: aliceblue;
+}
+.desc-exp{
+    color: aliceblue;
+}
+
 .img-proyecto{
     box-shadow: 10px 10px 30px #000;
     opacity: .7;

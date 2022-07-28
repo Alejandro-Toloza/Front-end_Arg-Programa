@@ -15,10 +15,11 @@ import { HysComponent } from './components/hys/hys.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { HomeComponent } from './components/home/home.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
     FooterComponent,
     NewExperienciaComponent,
     HomeComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NuevaEducacionComponent,
   ],
   imports: [
     BrowserModule,

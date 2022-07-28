@@ -1,15 +1,33 @@
 <div class="row">
-    <h1>Educación</h1>
+    <h2>Educacion</h2>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu">
+            Nueva Educacion
+        </button>
+    </div>
+    <div class="col lg 1"></div>
     <div class="col-lg-11">
-        <h1>Ciencia de datos e IA - Telecomunicaciones</h1>
-        <h2>ISPC</h2>
-        <h6>07/04/2021 - 15/08/2021</h6>
-        <p>Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Labore, ullam nihil! Delectus 
-            error obcaecati modi cumque itaque debitis odio 
-            adipisci nisi hic velit dolor non, 
-            at et. Necessitatibus, perspiciatis nostrum.
-        </p>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of edu">
+                    <td>
+                        <h3>{{Educacion.titulo_educacion}}</h3>
+                            {{Educacion.fecha_educacion}}
+                    </td>
+                    <td>{{Educacion.descripcion_educacion}}</td>
+
+                    <td>{{Educacion.img_educacion}}</td>
+                        <td>
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id_educacion}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                         <td>
+                            <button class="btn btn-danger" (click)="delete(Educacion.id_educacion)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </div>
