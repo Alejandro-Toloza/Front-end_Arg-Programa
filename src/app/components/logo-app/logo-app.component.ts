@@ -8,7 +8,8 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./logo-app.component.css']
 })
 export class LogoAppComponent implements OnInit {
-  isLogged: boolean;
+  //isLogged: boolean;
+  isLogged = false;
 
   constructor(private router:Router, private tokenService: TokenService) { }
 

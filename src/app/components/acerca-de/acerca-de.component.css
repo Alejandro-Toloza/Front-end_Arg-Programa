@@ -15,10 +15,19 @@ div{
 }
 #nombre{
     font-weight: bold;
+    margin-top: 70%;
+    position:relative;
+    right:80px;
+}
+#nombre-t{
+    font-weight: bold;
+    margin-top: 20%;
+    position:relative;
+    right:80px;
+}
+#acerca-de{
     margin-top: 50%;
 }
-
-
 
 /*-medias--*/
 @media (min-width:576.0px) {

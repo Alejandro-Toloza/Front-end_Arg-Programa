@@ -5,7 +5,17 @@
 }
 .redes{
     margin-right: 0.5em;
+    box-shadow: 10px 10px 30px #000;
+    opacity: .9;
 }
+.redes:hover{
+    opacity: 1;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+    
+}
+
 #logo-app{
     width: 150px; 
 }

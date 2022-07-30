@@ -20,6 +20,11 @@ import { HomeComponent } from './components/home/home.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NuevaEducacionComponent } from './components/educacion/nueva-educacion.component';
 import { LoginComponent } from './components/login/login.component';
+import { InterceptorService } from './service/interceptor-service';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { NuevoProyectoComponent } from './components/proyecto/nuevo-proyecto.component';
+import { EditarProyectoComponent } from './components/proyecto/editar-proyecto.component';
+
 
 
 
@@ -40,7 +45,10 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     EditExperienciaComponent,
     NuevaEducacionComponent,
+    EditEducacionComponent,
     LoginComponent,
+    NuevoProyectoComponent,
+    EditarProyectoComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +57,9 @@ import { LoginComponent } from './components/login/login.component';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    InterceptorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

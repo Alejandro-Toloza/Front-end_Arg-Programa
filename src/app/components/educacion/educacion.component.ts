@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
 import { SEducacionService } from 'src/app/service/s-educacion.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-educacion',
@@ -11,14 +12,20 @@ export class EducacionComponent implements OnInit {
 
   edu: Educacion[]=[];
 
-  constructor(private sEdu : SEducacionService) {  
+  constructor(private sEdu : SEducacionService, private tokenService: TokenService) {  
   }
+  isLogged = false;
 
   ngOnInit(): void {
-    this.cargarExperiencia();
+    this.cargarEducacion();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  cargarExperiencia(): void {
+  cargarEducacion(): void {
     this.sEdu.lista().subscribe(data => { this.edu = data; })
   }
 
@@ -26,7 +33,7 @@ export class EducacionComponent implements OnInit {
     if(id != undefined){
       this.sEdu.delete(id).subscribe(
         data => {
-          this.cargarExperiencia();
+          this.cargarEducacion();
         }, err => {
           alert("No se pudo borrar la experiencia");
         }

@@ -1,7 +1,11 @@
 .row{
     padding: 20px;
+
 }
 div{
     background-color:  rgb(11, 14, 55);
     color: aliceblue;
+}
+tbody{
+    color: aliceblue;   
 }
